@@ -12,7 +12,7 @@ xml = BytesIO( bytes('''
         </li>
     </ul>
     <hr/>
-    <p size="2h">
+    <p>
         <span align="left" width="24">TOTAL</span>
         <span align="right" width="24">0.15€</span>
     </p>
