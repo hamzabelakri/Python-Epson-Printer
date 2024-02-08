@@ -1,7 +1,7 @@
 from PIL import Image
 from escpos.printer import Usb
 import subprocess
-import imgkit  # Import imgkit module
+import imgkit 
 
 html_file = 'receipt.html'
 
@@ -10,7 +10,7 @@ image_file = 'receipt.png'
 options = {
     'quiet': '',
     'disable-smart-width': '',
-    'width': '400'
+    'width': '512'
 }
 
 imgkit.from_file(html_file, image_file, options=options)
@@ -23,5 +23,5 @@ image.show()
 
 with open(image_file, 'rb') as f:
     printer.image(Image.open(f))
-
-printer.cut() """
+printer.ln(5)
+printer.cut()  """
